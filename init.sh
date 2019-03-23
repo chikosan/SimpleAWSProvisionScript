@@ -13,3 +13,4 @@ sudo chown -R ec2-user:apache /var/www
 sudo chmod 2775 /var/www && find /var/www -type d -exec sudo chmod 2775 {} \;
 find /var/www -type f -exec sudo chmod 0664 {} \;
 echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+echo $(hostname) ,$(curl ifconfig.me -s) > /var/www/html/index.html
